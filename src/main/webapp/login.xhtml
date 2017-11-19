@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:h="http://xmlns.jcp.org/jsf/html"
+	  xmlns:p="http://primefaces.org/ui">
+
+
+<h:outputLabel value="${SPRING_SECURITY_LAST_EXCEPTION.message}"/>
+
+
+<form method="post" action="login-check">
+	<h:panelGrid columns="2" cellpadding="5">
+		<h:outputText value="Username2: "/>
+		<input name="username"/>
+		<h:outputText value="Password: "/>
+		<input type="password" name="password"/>
+		<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+	</h:panelGrid>
+
+	<p:commandButton value="Log in"/>
+
+</form>
+</html>
